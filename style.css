@@ -186,9 +186,9 @@ nav.scrolled .menu-toggle .bar {
    3. HERO HEADER
    ========================================================================== */
 header {
-  height: 85vh;
+  height: 90vh;
   min-height: 550px;
-  background: linear-gradient(rgba(27, 67, 50, 0.65), rgba(27, 67, 50, 0.85)), 
+  background: linear-gradient(rgba(20, 50, 38, 0.6), rgba(27, 67, 50, 0.85)), 
               url('images/panoramamerbabu.jpeg') center/cover no-repeat fixed;
   display: flex;
   align-items: center;
@@ -196,6 +196,10 @@ header {
   text-align: center;
   color: var(--white);
   padding: 0 7%;
+  position: relative;
+  /* Membuat potongan melengkung di bawah foto header */
+  clip-path: ellipse(110% 100% at 50% 0%);
+  margin-bottom: 40px;
 }
 
 .header-container {
@@ -611,45 +615,124 @@ footer {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* ─── PERBAIKAN LAYOUT LAPTOP KECIL / TABLET (992PX) ─── */
 @media (max-width: 992px) {
   header h1 { font-size: 3rem; }
-  .wisata-item { grid-template-columns: 1fr; }
-  .wisata-item.inverse .wisata-img-wrapper { grid-column: 1; }
-  .wisata-img-wrapper { height: 280px; }
-  .lokasi-grid-panel { grid-template-columns: 1fr; }
-  .lokasi-frame { height: 320px; }
+  
+  .wisata-showcase {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 40px !important;
+  }
+
+  /* Ubah kontainer menjadi flex vertikal biasa */
+  .wisata-item { 
+    display: flex !important;
+    flex-direction: column !important; 
+  }
+
+  /* Paksa semua gambar (baik normal maupun inverse) untuk berada di urutan pertama (paling atas) */
+  .wisata-item .wisata-img-wrapper,
+  .wisata-item.inverse .wisata-img-wrapper {
+    order: 1 !important;
+    width: 100% !important;
+    height: 280px !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+
+  /* Paksa semua teks konten berada di urutan kedua (di bawah gambar) */
+  .wisata-item .wisata-content,
+  .wisata-item.inverse .wisata-content {
+    order: 2 !important;
+    width: 100% !important;
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+
+  .lokasi-grid-panel { grid-template-columns: 1fr !important; }
+  .lokasi-frame { height: 320px !important; }
 }
 
+/* ─── PERBAIKAN LAYOUT MOBILE / HP (768PX) ─── */
 @media (max-width: 768px) {
   section { padding: 60px 5% 45px; }
-  nav { padding: 15px 5%; }
+  nav { padding: 20px 5%; }
+  
   .menu-toggle { display: flex; }
   
+  /* OVERLAY MENU MOBILE PREMIUM (GLASSMORPHISM) */
   .nav-links {
-    position: absolute;
-    top: 100%;
+    position: fixed; 
+    top: 0;
     left: 0;
     width: 100%;
-    background: var(--white);
+    height: 100vh;
+    background: rgba(27, 67, 50, 0.95); 
+    backdrop-filter: blur(15px); 
+    -webkit-backdrop-filter: blur(15px);
+    
     flex-direction: column;
-    padding: 25px;
-    gap: 15px;
-    text-align: center;
-    box-shadow: var(--shadow-md);
+    justify-content: center; 
+    align-items: center;
+    gap: 35px; 
+    
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-15px);
+    transform: translateY(-20px);
+    transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1); 
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .nav-links a {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 1.6rem; 
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     transition: var(--transition);
   }
 
-  .nav-links.active { opacity: 1; visibility: visible; transform: translateY(0); }
-  .nav-links a { color: var(--text-dark); }
-  nav:not(.scrolled) .nav-logo { color: var(--primary); }
-  nav:not(.scrolled) .menu-toggle .bar { background-color: var(--primary); }
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: var(--accent) !important; 
+    transform: scale(1.1);
+  }
+
+  .nav-logo, .menu-toggle {
+    position: relative;
+    z-index: 1001; 
+  }
+
+  /* Animasi Tombol Hamburger jadi (X) */
+  .menu-toggle.open .bar:nth-child(1) {
+    transform: translateY(4px) rotate(45deg);
+  }
+  .menu-toggle.open .bar:nth-child(2) {
+    transform: translateY(-5px) rotate(-45deg);
+  }
+
+  nav .menu-toggle .bar {
+    background-color: var(--white) !important;
+  }
+
+  nav:not(.scrolled) .nav-logo { color: var(--white); }
+  nav:not(.scrolled) .menu-toggle .bar { background-color: var(--white) !important; }
+  
+  nav.scrolled .nav-logo { color: var(--primary); }
+  nav.scrolled .menu-toggle .bar { background-color: var(--primary) !important; }
+  
+  nav.scrolled:not(:has(.nav-links.active)) .nav-logo { color: var(--primary); }
+  nav.scrolled:not(:has(.nav-links.active)) .menu-toggle .bar { background-color: var(--primary) !important; }
   
   header h1 { font-size: 2.3rem; }
   
-  /* Responsivitas Slider saat di HP */
   .umkm-mini-card {
     min-width: 290px;
     flex: 0 0 290px;
