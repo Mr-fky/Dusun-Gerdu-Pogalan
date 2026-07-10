@@ -226,7 +226,8 @@ header p {
    ========================================================================== */
 .grid-profile {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Diubah dari 300px menjadi 240px agar 4 kartu muat sejajar */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
@@ -523,11 +524,12 @@ header p {
   color: #b5835a;
 }
 
-.btn-wa {
+/* Mengubah tombol WA menjadi tombol Lokasi Peta */
+.btn-map {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: #25d366;
+  background: #de5246; /* Warna merah penanda lokasi/maps */
   color: var(--white);
   padding: 6px 14px;
   border-radius: 30px;
@@ -535,11 +537,13 @@ header p {
   font-weight: 700;
   font-size: 0.8rem;
   transition: var(--transition);
+  box-shadow: 0 2px 5px rgba(222, 82, 70, 0.2);
 }
 
-.btn-wa:hover {
-  background: #20ba5a;
+.btn-map:hover {
+  background: #c53929; /* Warna merah sedikit lebih gelap saat di-hover */
   transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(222, 82, 70, 0.3);
 }
 
 /* ==========================================================================
@@ -661,7 +665,6 @@ footer {
   
   .menu-toggle { display: flex; }
   
-  /* OVERLAY MENU MOBILE PREMIUM (GLASSMORPHISM) */
   .nav-links {
     position: fixed; 
     top: 0;
@@ -743,4 +746,55 @@ footer {
 
   .footer-container { flex-direction: column; text-align: center; }
   .footer-credit { text-align: center; }
+}
+
+/* ==========================================================================
+   10. SEKSI SPONSOR
+   ========================================================================== */
+#sponsor {
+  padding: 60px 7% 50px; /* Ukuran padding sedikit lebih kecil agar pas */
+}
+
+.sponsor-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px; /* Jarak antar logo */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.sponsor-logo {
+  flex: 0 1 150px; /* Lebar fleksibel tiap logo sekitar 150px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sponsor-logo img {
+  width: 100%;
+  height: auto;
+  max-height: 70px; /* Membatasi tinggi maksimum agar semua logo terlihat seimbang */
+  object-fit: contain;
+  filter: grayscale(100%); /* Membuat efek hitam putih estetik */
+  opacity: 0.6;
+  transition: var(--transition);
+}
+
+/* Efek saat kursor menyentuh logo */
+.sponsor-logo:hover img {
+  filter: grayscale(0%); /* Mengembalikan warna asli logo */
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Penyesuaian untuk layar HP */
+@media (max-width: 768px) {
+  .sponsor-container {
+    gap: 30px; /* Jarak logo lebih rapat di HP */
+  }
+  .sponsor-logo {
+    flex: 0 1 110px; /* Ukuran logo sedikit mengecil di HP */
+  }
 }
