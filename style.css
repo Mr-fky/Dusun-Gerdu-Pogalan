@@ -197,7 +197,6 @@ header {
   color: var(--white);
   padding: 0 7%;
   position: relative;
-  /* Membuat potongan melengkung di bawah foto header */
   clip-path: ellipse(110% 100% at 50% 0%);
   margin-bottom: 40px;
 }
@@ -226,7 +225,6 @@ header p {
    ========================================================================== */
 .grid-profile {
   display: grid;
-  /* Diubah dari 300px menjadi 240px agar 4 kartu muat sejajar */
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 30px;
   max-width: 1200px;
@@ -410,12 +408,12 @@ header p {
   border-radius: 10px;
 }
 
-/* Card Nodes Galeri */
+/* Card Nodes Galeri Umum */
 .gallery-node {
   position: relative;
   border-radius: 12px;
   overflow: hidden;
-  height: 300px;
+  height: 320px;
   min-width: 280px;          
   flex: 0 0 280px;           
   scroll-snap-align: start;  
@@ -524,12 +522,11 @@ header p {
   color: #b5835a;
 }
 
-/* Mengubah tombol WA menjadi tombol Lokasi Peta */
 .btn-map {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: #de5246; /* Warna merah penanda lokasi/maps */
+  background: #de5246;
   color: var(--white);
   padding: 6px 14px;
   border-radius: 30px;
@@ -541,11 +538,94 @@ header p {
 }
 
 .btn-map:hover {
-  background: #c53929; /* Warna merah sedikit lebih gelap saat di-hover */
+  background: #c53929;
   transform: translateY(-1px);
   box-shadow: 0 4px 10px rgba(222, 82, 70, 0.3);
 }
 
+/* ==========================================================================
+   KHUSUS SEKSI PERTANIAN (PROPORSI PAS & RAPI)
+   ========================================================================== */
+#pertanian .gallery-node {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  /* Kunci 1: Batasi tinggi maksimal & hilangkan min-height raksasa */
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#pertanian .gallery-node:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(27, 67, 50, 0.12);
+}
+
+/* Gambar proporsional */
+#pertanian .gallery-node img {
+  width: 100%;
+  height: 210px; /* Sedikit lebih tinggi biar gambar terasa lega */
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+#pertanian .gallery-node:hover img {
+  transform: scale(1.04);
+}
+
+/* Kontainer Teks Pas di Badan Kartu */
+#pertanian .gallery-overlay {
+  position: relative !important;
+  inset: auto !important;
+  background: #ffffff !important;
+  padding: 20px 22px 24px !important; /* Padding seimbang */
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  align-items: flex-start !important; /* Semua teks rata kiri */
+  opacity: 1 !important;
+  height: auto !important; /* Biar tinggi ngikutin teks aja */
+}
+
+/* Judul Kartu */
+#pertanian .gallery-overlay h4 {
+  color: #1b4332 !important;
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 8px !important;
+  line-height: 1.3 !important;
+  transform: none !important;
+  text-shadow: none !important;
+}
+
+/* Garis Pemanis di BAWAH JUDUL (Aksen Keren) */
+#pertanian .gallery-overlay h4::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #40916c;
+  border-radius: 2px;
+  margin-top: 8px; /* Jarak dari judul ke garis */
+}
+
+/* Hilangkan garis aksen bawah yang bikin kopong kemarin */
+#pertanian .gallery-overlay::after {
+  display: none !important;
+}
+
+/* Deskripsi Teks */
+#pertanian .gallery-overlay p {
+  color: #607260 !important;
+  font-size: 0.88rem !important;
+  line-height: 1.5 !important;
+  margin: 10px 0 0 0 !important;
+  transform: none !important;
+  text-shadow: none !important;
+}
 /* ==========================================================================
    7. SEKSI LOKASI
    ========================================================================== */
@@ -629,13 +709,11 @@ footer {
     gap: 40px !important;
   }
 
-  /* Ubah kontainer menjadi flex vertikal biasa */
   .wisata-item { 
     display: flex !important;
     flex-direction: column !important; 
   }
 
-  /* Paksa semua gambar (baik normal maupun inverse) untuk berada di urutan pertama (paling atas) */
   .wisata-item .wisata-img-wrapper,
   .wisata-item.inverse .wisata-img-wrapper {
     order: 1 !important;
@@ -645,7 +723,6 @@ footer {
     grid-row: auto !important;
   }
 
-  /* Paksa semua teks konten berada di urutan kedua (di bawah gambar) */
   .wisata-item .wisata-content,
   .wisata-item.inverse .wisata-content {
     order: 2 !important;
@@ -713,7 +790,6 @@ footer {
     z-index: 1001; 
   }
 
-  /* Animasi Tombol Hamburger jadi (X) */
   .menu-toggle.open .bar:nth-child(1) {
     transform: translateY(4px) rotate(45deg);
   }
@@ -757,7 +833,7 @@ footer {
 
 .sponsor-container {
   display: flex;
-  justify-content: center; /* Membuat semua logo otomatis di tengah */
+  justify-content: center; 
   align-items: center;
   flex-wrap: wrap;
   gap: 60px; 
@@ -769,14 +845,14 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 160px;        /* Mengunci lebar bungkus logo */
-  height: 90px;        /* Mengunci tinggi bungkus logo */
+  width: 160px;        
+  height: 90px;        
 }
 
 .sponsor-logo img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Memaksa logo pas di dalam kotak tanpa merusak rasionya */
+  object-fit: contain; 
   filter: grayscale(100%); 
   opacity: 0.6;
   transition: var(--transition);
@@ -788,13 +864,12 @@ footer {
   transform: scale(1.05);
 }
 
-/* Penyesuaian HP */
 @media (max-width: 768px) {
   .sponsor-container {
     gap: 30px;
   }
   .sponsor-logo {
-    width: 120px;      /* Ukuran kotak logo lebih kecil sedikit di HP */
+    width: 120px;      
     height: 70px;
   }
 }
