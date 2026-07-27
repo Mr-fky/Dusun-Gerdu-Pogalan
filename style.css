@@ -544,13 +544,13 @@ header p {
 }
 
 /* ==========================================================================
-   KHUSUS SEKSI PERTANIAN (PROPORSI PAS & RAPI)
+   7. KHUSUS SEKSI PERTANIAN & PETERNAKAN (PROPORSI PAS & RAPI)
    ========================================================================== */
-#pertanian .gallery-node {
+#pertanian .gallery-node,
+#peternakan .gallery-node {
   background: #ffffff;
   border-radius: 16px;
   overflow: hidden;
-  /* Kunci 1: Batasi tinggi maksimal & hilangkan min-height raksasa */
   height: auto;
   display: flex;
   flex-direction: column;
@@ -559,39 +559,44 @@ header p {
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-#pertanian .gallery-node:hover {
+#pertanian .gallery-node:hover,
+#peternakan .gallery-node:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 30px rgba(27, 67, 50, 0.12);
 }
 
 /* Gambar proporsional */
-#pertanian .gallery-node img {
+#pertanian .gallery-node img,
+#peternakan .gallery-node img {
   width: 100%;
-  height: 210px; /* Sedikit lebih tinggi biar gambar terasa lega */
+  height: 210px;
   object-fit: cover;
   transition: transform 0.4s ease;
 }
 
-#pertanian .gallery-node:hover img {
+#pertanian .gallery-node:hover img,
+#peternakan .gallery-node:hover img {
   transform: scale(1.04);
 }
 
 /* Kontainer Teks Pas di Badan Kartu */
-#pertanian .gallery-overlay {
+#pertanian .gallery-overlay,
+#peternakan .gallery-overlay {
   position: relative !important;
   inset: auto !important;
   background: #ffffff !important;
-  padding: 20px 22px 24px !important; /* Padding seimbang */
+  padding: 20px 22px 24px !important;
   display: flex !important;
   flex-direction: column !important;
   justify-content: flex-start !important;
-  align-items: flex-start !important; /* Semua teks rata kiri */
+  align-items: flex-start !important;
   opacity: 1 !important;
-  height: auto !important; /* Biar tinggi ngikutin teks aja */
+  height: auto !important;
 }
 
 /* Judul Kartu */
-#pertanian .gallery-overlay h4 {
+#pertanian .gallery-overlay h4,
+#peternakan .gallery-overlay h4 {
   color: #1b4332 !important;
   font-size: 1.15rem !important;
   font-weight: 700 !important;
@@ -602,23 +607,25 @@ header p {
 }
 
 /* Garis Pemanis di BAWAH JUDUL (Aksen Keren) */
-#pertanian .gallery-overlay h4::after {
+#pertanian .gallery-overlay h4::after,
+#peternakan .gallery-overlay h4::after {
   content: '';
   display: block;
   width: 30px;
   height: 3px;
   background: #40916c;
   border-radius: 2px;
-  margin-top: 8px; /* Jarak dari judul ke garis */
+  margin-top: 8px;
 }
 
-/* Hilangkan garis aksen bawah yang bikin kopong kemarin */
-#pertanian .gallery-overlay::after {
+#pertanian .gallery-overlay::after,
+#peternakan .gallery-overlay::after {
   display: none !important;
 }
 
 /* Deskripsi Teks */
-#pertanian .gallery-overlay p {
+#pertanian .gallery-overlay p,
+#peternakan .gallery-overlay p {
   color: #607260 !important;
   font-size: 0.88rem !important;
   line-height: 1.5 !important;
@@ -626,8 +633,9 @@ header p {
   transform: none !important;
   text-shadow: none !important;
 }
+
 /* ==========================================================================
-   7. SEKSI LOKASI
+   8. SEKSI LOKASI
    ========================================================================== */
 .lokasi-grid-panel {
   display: grid;
@@ -661,7 +669,47 @@ header p {
 .lokasi-frame { height: 400px; width: 100%; }
 
 /* ==========================================================================
-   8. FOOTER
+   9. SEKSI SPONSOR (FIXED SIZE)
+   ========================================================================== */
+#sponsor {
+  padding: 80px 7% 60px;
+}
+
+.sponsor-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 60px; 
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.sponsor-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;        
+  height: 90px;        
+}
+
+.sponsor-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+  filter: grayscale(100%); 
+  opacity: 0.6;
+  transition: var(--transition);
+}
+
+.sponsor-logo:hover img {
+  filter: grayscale(0%); 
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* ==========================================================================
+   10. FOOTER
    ========================================================================== */
 footer {
   background: var(--primary);
@@ -692,7 +740,7 @@ footer {
 .copyright { font-size: 0.8rem; }
 
 /* ==========================================================================
-   9. ANIMASI DAN MEDIA QUERY (RESPONSIVE)
+   11. ANIMASI DAN MEDIA QUERY (RESPONSIVE)
    ========================================================================== */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(25px); }
@@ -822,49 +870,7 @@ footer {
 
   .footer-container { flex-direction: column; text-align: center; }
   .footer-credit { text-align: center; }
-}
 
-/* ==========================================================================
-   10. SEKSI SPONSOR (FIXED SIZE)
-   ========================================================================== */
-#sponsor {
-  padding: 80px 7% 60px;
-}
-
-.sponsor-container {
-  display: flex;
-  justify-content: center; 
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 60px; 
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.sponsor-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 160px;        
-  height: 90px;        
-}
-
-.sponsor-logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain; 
-  filter: grayscale(100%); 
-  opacity: 0.6;
-  transition: var(--transition);
-}
-
-.sponsor-logo:hover img {
-  filter: grayscale(0%); 
-  opacity: 1;
-  transform: scale(1.05);
-}
-
-@media (max-width: 768px) {
   .sponsor-container {
     gap: 30px;
   }
