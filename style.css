@@ -922,3 +922,33 @@ footer {
   background: #1b4332;
 }
 
+/* ==========================================================================
+   PENYESUAIAN TAMPILAN KHUSUS LAYAR HP / MOBILE
+   ========================================================================== */
+@media (max-width: 768px) {
+  header {
+    height: 75vh;
+    min-height: 480px;
+    
+    /* Hilangkan lengkungan ekstrem pada HP agar gambar gunung terlihat utuh */
+    clip-path: none !important;
+    border-radius: 0 0 25px 25px !important; /* Lengkungan sangat tipis & rapi di sudut bawah */
+    
+    padding: 0 5%;
+    background-position: center 50%;
+  }
+
+  .header-container {
+    margin-top: 20px;
+  }
+
+  .header-container h1 {
+    font-size: 2.3rem; /* Sesuaikan ukuran judul di layar HP */
+    margin-bottom: 12px;
+  }
+
+  .header-container p {
+    font-size: 0.95rem; /* Sesuaikan deskripsi agar pas dalam 3-4 baris */
+    line-height: 1.5;
+  }
+}
