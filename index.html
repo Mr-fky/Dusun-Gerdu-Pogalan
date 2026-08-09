@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
@@ -7,13 +7,18 @@
   
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- SUDAH DIPERBAIKI: Langsung panggil style.css -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- ==========================================================================
+        NAVIGASI BAR
+       ========================================================================== -->
   <nav>
     <div class="nav-container">
-      <a href="#" class="nav-logo">Dusun Gerdu</a>
+      <a href="#home" class="nav-logo">Dusun Gerdu</a>
       <button class="menu-toggle" aria-label="Toggle Menu">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -30,6 +35,9 @@
     </div>
   </nav>
 
+  <!-- ==========================================================================
+        HERO HEADER
+       ========================================================================== -->
   <header id="home">
     <div class="header-container">
       <h1>Dusun Gerdu</h1>
@@ -37,10 +45,13 @@
     </div>
   </header>
 
+  <!-- ==========================================================================
+        SEKSI PROFIL / SEJARAH
+       ========================================================================== -->
   <section id="sejarah">
     <div class="section-title">
       <span>Tentang Dusun</span>
-      <h2>Nadi Kehidupan Dusun Gerdu</h2>
+      <h2>Kehidupan Dusun Gerdu</h2>
     </div>
     
     <div class="grid-profile">
@@ -59,106 +70,105 @@
       <div class="profile-card">
         <div class="card-icon"><i class="fa-solid fa-carrot"></i></div>
         <h3>Pertanian Sayuran</h3>
-        <p>Pertanian sayuran menjadi urat nadi perekonomian utama warga Dusun Gerdu. Didukung tanah vulkanis yang subur dan hawa sejuk pegunungan, wilayah ini menghasilkan berbagai jenis sayur segar berkualitas seperti sawi, kubis, cabai, tomat, dan adas.</p>
+        <p>Pertanian sayuran menjadi urat nadi perekonomian utama warga Dusun Gerdu. Didukung tanah vulkanis yang subur dan hawa sejuk pegunungan, wilayah ini menghasilkan berbagai jenis sayur segar berkualitas seperti kubis, cabai, tomat, dan ada juga tembakau.</p>
       </div>
     </div>
   </section>
 
   <!-- ==========================================================================
-       SEKSI PERTANIAN
+        SEKSI PERTANIAAN
        ========================================================================== -->
   <section id="pertanian">
     <div class="section-title">
       <span>Potensi Pertanian</span>
-      <h2>Lahan & Pemasaran Hasil Tani</h2>
+      <h2>Pertanian Unggulan Dusun Gerdu </h2>
     </div>
 
     <div class="gallery-slider">
       <div class="gallery-node">
-        <img src="images/lahan.jpeg" alt="Lahan Pertanian Sayur">
+        <img src="images/kobiss.jpeg" alt="Lahan Pertanian Sayur">
         <div class="gallery-overlay">
-          <h4>Hamparan Lahan Sayur</h4>
-          <p>Terasering hijau komoditas sayur segar khas lereng Merbabu.</p>
+          <h4>Hamparan Lahan Kobis</h4>
+          <p>Lahan hijau komoditas kobis segar khas lereng Merbabu.</p>
         </div>
       </div>
 
       <div class="gallery-node">
-        <img src="images/lahan.jpeg" alt="Panen Sayuran Segar">
+        <img src="images/cabe.jpeg" alt="Panen Sayuran Segar">
         <div class="gallery-overlay">
-          <h4>Panen Sayuran Segar</h4>
-          <p>Hasil tani organik berkualitas yang dipetik langsung oleh warga lokal.</p>
+          <h4>Hamparan Lahan Cabe</h4>
+          <p>Kawasan pertanian cabai subur berkualitas khas lereng Merbabu.</p>
         </div>
       </div>
 
       <div class="gallery-node">
-        <img src="images/lahan.jpeg" alt="Pemasaran Hasil Tani">
+        <img src="images/tembakau.jpeg" alt="Pemasaran Hasil Tani">
         <div class="gallery-overlay">
-          <h4>Pemasaran & Distribusi</h4>
-          <p>Proses pengepakan dan distribusi sayur menuju pasar modern & tradisional.</p>
+          <h4>Hamparan Lahan Tembakau</h4>
+          <p>Kawasan budidaya tembakau pilihan hasil olah tani lokal lereng Merbabu.</p>
         </div>
       </div>
 
       <div class="gallery-node">
-        <img src="images/lahan.jpeg" alt="Kreativitas Petani">
+        <img src="images/tomat.jpeg" alt="Kreativitas Petani">
         <div class="gallery-overlay">
-          <h4>Kemandirian Petani</h4>
-          <p>Sinergi gotong royong petani lokal dalam menjaga kualitas panen.</p>
+          <h4>Hamparan Lahan Tomat</h4>
+          <p>Kawasan budidaya tomat segar hasil olah tani lokal lereng Merbabu.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ==========================================================================
-       SEKSI PETERNAKAN (BARU)
-       ========================================================================== -->
-  <section id="peternakan" class="bg-alt">
-    <div class="section-title">
-      <span>Potensi Peternakan</span>
-      <h2>Peternakan Dusun Gerdu</h2>
-    </div>
+     SEKSI PETERNAKAN (SLIDER HORIZONTAL & RATA TENGAH)
+     ========================================================================== -->
+<section id="peternakan" class="bg-alt" style="padding: 80px 0;">
+  <div class="section-title" style="text-align: center; margin-bottom: 40px;">
+    <span style="color: #40916c; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.85rem;">Potensi Peternakan</span>
+    <h2 style="color: #1b4332; font-size: 2.1rem; font-weight: 800; margin-top: 6px;">Peternakan Rumahan Dusun Gerdu</h2>
+    <div style="width: 50px; height: 4px; background: #40916c; margin: 12px auto 0; border-radius: 2px;"></div>
+  </div>
 
-    <div class="gallery-slider">
-      <div class="gallery-node">
-        <img src="images/kandang.jpg" alt="Peternakan Sapi Potong & Perah">
-        <div class="gallery-overlay">
-          <h4>Sapi Potong & Perah</h4>
-          <p>Pengembangan komoditas ternak sapi lokal dengan tata kelola pakan hijau alami dari hasil pertanian warga.</p>
-        </div>
-      </div>
-
-      <div class="gallery-node">
-        <img src="images/kandang.jpg" alt="Peternakan Kambing & Domba">
-        <div class="gallery-overlay">
-          <h4>Kambing & Domba</h4>
-          <p>Budidaya ternak kecil terpadu yang dimanfaatkan untuk hasil daging serta pemanfaatan pupuk kandang organik.</p>
-        </div>
-      </div>
-
-      <div class="gallery-node">
-        <img src="images/kandang.jpg" alt="Pengolahan Pupuk Organik">
-        <div class="gallery-overlay">
-          <h4>Pupuk Organik Mandiri</h4>
-          <p>Integrasi limbah ternak menjadi pupuk kompos berkualitas tinggi untuk mendukung pertanian ramah lingkungan.</p>
-        </div>
-      </div>
-
-      <div class="gallery-node">
-        <img src="images/kandang.jpg" alt="Pengolahan Pupuk Organik">
-        <div class="gallery-overlay">
-          <h4>Pupuk Organik Mandiri</h4>
-          <p>Integrasi limbah ternak menjadi pupuk kompos berkualitas tinggi untuk mendukung pertanian ramah lingkungan.</p>
-        </div>
+  <!-- WADAH SLIDER -->
+  <div class="gallery-slider">
+    
+    <!-- KARTU 1 -->
+    <div class="gallery-node">
+      <img src="images/kandang.jpg" alt="Peternakan Sapi Potong & Perah">
+      <div class="gallery-overlay">
+        <h4>Sapi Potong & Perah</h4>
+        <p>Pengembangan komoditas ternak sapi lokal dengan tata kelola pakan hijau alami dari hasil pertanian warga.</p>
       </div>
     </div>
-  </section>
+
+    <!-- KARTU 2 -->
+    <div class="gallery-node">
+      <img src="images/kandang.jpg" alt="Peternakan Sapi Potong & Perah">
+      <div class="gallery-overlay">
+        <h4>Sapi Potong & Perah</h4>
+        <p>Pengembangan komoditas ternak sapi lokal dengan tata kelola pakan hijau alami dari hasil pertanian warga.</p>
+      </div>
+    </div>
+
+    <!-- KARTU 3 -->
+    <div class="gallery-node">
+      <img src="images/kandang.jpg" alt="Peternakan Kambing & Domba">
+      <div class="gallery-overlay">
+        <h4>Kambing & Domba</h4>
+        <p>Budidaya ternak kecil terpadu yang dimanfaatkan untuk hasil daging serta pemanfaatan pupuk kandang organik.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
 
   <!-- ==========================================================================
-       SEKSI WISATA
+        SEKSI WISATA
        ========================================================================== -->
   <section id="wisata">
     <div class="section-title">
       <span>Eksplorasi</span>
-      <h2>Destinasi Sekitar</h2>
+      <h2>Destinasi Sekitar Dusun Gerdu</h2>
     </div>
     
     <div class="wisata-showcase">
@@ -191,11 +201,27 @@
           </div>
         </div>
       </div>
+      
+<div class="wisata-item inverse">
+  <div class="wisata-img-wrapper">
+    <img src="images/grenden.jpg" alt="Wisata Bukit Grenden">
+  </div>
+  <div class="wisata-content">
+    <div class="item-tag">Wisata Alam & Spot Foto</div>
+    <h3>Bukit Grenden</h3>
+    <p>Destinasi wisata alam hutan pinus di lereng Gunung Merbabu yang menawarkan panorama menawan, udara sejuk, serta beragam spot foto unik seperti rumah pohon.</p>
+    <div class="wisata-meta">
+      <span><i class="fa-solid fa-map-location"></i> Pakis, Magelang</span>
+      <a href="https://maps.google.com/?q=Bukit+Grenden+Magelang" target="_blank" class="btn-text">Buka Peta <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</div>
+
     </div>
   </section>
 
   <!-- ==========================================================================
-       SEKSI GALERI
+        SEKSI GALERI
        ========================================================================== -->
   <section id="galeri" class="bg-alt">
     <div class="section-title">
@@ -216,32 +242,32 @@
         <div class="gallery-overlay"><h4>Panorama Merbabu</h4></div>
       </div>
       <div class="gallery-node">
-        <img src="images/masjid.jpg" alt="Masjid">
-        <div class="gallery-overlay"><h4>Masjid Dusun</h4></div>
+        <img src="images/lahan.jpeg" alt="Masjid">
+        <div class="gallery-overlay"><h4>Panorama Merapi</h4></div>
       </div>
     </div>
   </section>
 
   <!-- ==========================================================================
-       SEKSI UMKM
+        SEKSI UMKM (Dihubungkan ke LocalStorage/Admin)
        ========================================================================== -->
   <section id="umkm">
     <div class="section-title">
       <span>Ekonomi Lokal</span>
-      <h2>UMKM & Kuliner Unggulan</h2>
+      <h2>UMKM & Kuliner Dusun Gerdu</h2>
     </div>
-    <div class="umkm-flex">
+    <div class="umkm-flex" id="umkmContainer">
       <div class="umkm-mini-card">
         <div class="umkm-thumb">
-          <img src="images/mieayam.jpg" alt="Mie Ayam">
+          <img src="images/mieayam.webp" alt="Mie Ayam">
         </div>
         <div class="umkm-details">
           <span class="label-category">Kuliner</span>
-          <h3>Mie Ayam Dusun</h3>
+          <h3>Mie Ayam Bakso Pak Brewok</h3>
           <p>Cita rasa mie ayam pedesaan gurih dengan sayuran sawi segar organik dari hasil perkebunan petani lokal Gerdu.</p>
           <div class="umkm-footer">
             <span class="price-info">Ready Setiap Hari</span>
-            <a href="https://maps.google.com" target="_blank" class="btn-map"><i class="fa-solid fa-map-location-dot"></i> Lokasi</a>
+            <a href="https://maps.app.goo.gl/7Bbg793Ma3nTDK6v6" target="_blank" class="btn-map"><i class="fa-solid fa-map-location-dot"></i> Lokasi</a>
           </div>
         </div>
       </div>
@@ -251,51 +277,50 @@
           <img src="images/seblak.jpg" alt="Seblak">
         </div>
         <div class="umkm-details">
-          <span class="label-category">Jajanan</span>
-          <h3>Seblak Jeletot</h3>
+          <span class="label-category">Kuliner</span>
+          <h3>Seneng Nyeblak</h3>
           <p>Kuliner jajanan pedas hangat berkuah kencur yang sangat cocok dinikmati di tengah hawa dingin lereng pegunungan.</p>
           <div class="umkm-footer">
             <span class="price-info">Level Pedas 1-5</span>
-            <a href="https://maps.google.com" target="_blank" class="btn-map"><i class="fa-solid fa-map-location-dot"></i> Lokasi</a>
+            <a href="https://maps.app.goo.gl/7Bbg793Ma3nTDK6v6" target="_blank" class="btn-map"><i class="fa-solid fa-map-location-dot"></i> Lokasi</a>
           </div>
         </div>
       </div>
 
       <div class="umkm-mini-card">
-  <div class="umkm-thumb">
-    <img src="images/nasirames.jpg" alt="Nasi Rames Dusun">
-  </div>
-  <div class="umkm-details">
-    <span class="label-category">Kuliner Utama</span>
-    <h3>Nasi Rames Dusun</h3>
-    <p>Hidangan nasi hangat lengkap dengan aneka lauk olahan khas pedesaan dan sayuran segar hasil panen petani Gerdu.</p>
-    <div class="umkm-footer">
-      <span class="price-info">Porsi Murah & Kenyang</span>
-      <a href="https://maps.google.com" target="_blank" class="btn-map"><i class="fa-solid fa-map-location-dot"></i> Lokasi</a>
-    </div>
-  </div>
-</div>
+        <div class="umkm-thumb">
+          <img src="images/nasirames.jpg" alt="Nasi Rames Dusun">
+        </div>
+        <div class="umkm-details">
+          <span class="label-category">Kuliner</span>
+          <h3>Nasi Rames Dusun</h3>
+          <p>Hidangan nasi hangat lengkap dengan aneka lauk olahan khas pedesaan dan sayuran segar hasil panen petani Gerdu.</p>
+          <div class="umkm-footer">
+            <span class="price-info">Porsi Murah & Kenyang</span>
+            <a href="https://maps.app.goo.gl/7Bbg793Ma3nTDK6v6" target="_blank" class="btn-map"><i class="fa-solid fa-map-location-dot"></i> Lokasi</a>
+          </div>
+        </div>
+      </div>
 
-<div class="umkm-mini-card">
-  <div class="umkm-thumb">
-    <img src="images/jus.jpg" alt="Jus Buah & Sayur Segar">
-  </div>
-  <div class="umkm-details">
-    <span class="label-category">Minuman</span>
-    <h3>Jus Segar Lereng Merbabu</h3>
-    <p>Olahan minuman jus sehat yang dipetik langsung dari kebun lokal, memadukan kesegaran buah dan sayur seperti adas, tomat, dan wortel.</p>
-    <div class="umkm-footer">
-      <span class="price-info">100% Bahan Alami</span>
-      <a href="https://maps.google.com" target="_blank" class="btn-map"><i class="fa-solid fa-map-location-dot"></i> Lokasi</a>
-    </div>
-  </div>
-</div>
-
+      <div class="umkm-mini-card">
+        <div class="umkm-thumb">
+          <img src="images/jus.jpg" alt="Jus Buah & Sayur Segar">
+        </div>
+        <div class="umkm-details">
+          <span class="label-category">Minuman</span>
+          <h3>Jus Segar Lereng Merbabu</h3>
+          <p>Olahan minuman jus sehat yang dipetik langsung dari kebun lokal, memadukan kesegaran buah dan sayur seperti adas, tomat, dan wortel.</p>
+          <div class="umkm-footer">
+            <span class="price-info">100% Bahan Alami</span>
+            <a href="https://maps.app.goo.gl/7Bbg793Ma3nTDK6v6" target="_blank" class="btn-map"><i class="fa-solid fa-map-location-dot"></i> Lokasi</a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- ==========================================================================
-       SEKSI LOKASI
+        SEKSI LOKASI
        ========================================================================== -->
   <section id="lokasi" class="bg-alt">
     <div class="lokasi-grid-panel">
@@ -321,40 +346,29 @@
     </div>
   </section>
 
-  <!-- ==========================================================================
-       SEKSI SPONSOR
-       ========================================================================== -->
-  <section id="sponsor">
-    <div class="section-title">
-      <span>Dukungan</span>
-      <h2>Mitra & Sponsor</h2>
-    </div>
-    <div class="sponsor-container">
-      <div class="sponsor-logo">
-        <img src="images/umby.jpg" alt="Logo UMBY">
-      </div>
-      <div class="sponsor-logo">
-        <img src="images/astra.jpg" alt="Logo Kabupaten Magelang">
-      </div>
-      <div class="sponsor-logo">
-        <img src="images/aqua.jpg" alt="Logo Karang Taruna">
-      </div>
-    </div>
-  </section>
 
+  <!-- ==========================================================================
+        FOOTER
+       ========================================================================== -->
   <footer>
     <div class="footer-container">
       <div class="footer-brand">
         <h3>Gerdu</h3>
-        <p>Pembangunan Digitalisasi Profil Kawasan Agrowisata Lereng Merbabu.</p>
+        <p>Pembangunan Digitalisasi Dusun.</p>
       </div>
       <div class="footer-credit">
         <p class="footer-kkn"><i class="fa-solid fa-graduation-cap"></i> KKN Kelompok 49 UMBY</p>
-        <p class="copyright">© 2026 Dusun Gerdu. All Rights Reserved.</p>
+        <p class="copyright">
+          © 2026 Dusun Gerdu. All Rights Reserved. | 
+          <a href="admin.html" target="_blank" style="color: rgba(255,255,255,0.6); text-decoration: none;">
+            <i class="fa-solid fa-gear"></i> Panel Admin
+          </a>
+        </p>
       </div>
     </div>
   </footer>
 
+  <!-- SUDAH DIPERBAIKI: Langsung panggil script.js -->
   <script src="script.js"></script>
 </body>
 </html>
