@@ -191,7 +191,7 @@ min-height: 550px;
 
 /* Gradient lebih tipis & transparan agar gunung terlihat terang dan hidup */
 background: linear-gradient(180deg, rgba(15, 23, 42, 0.35) 0%, rgba(0, 0, 0, 0.1) 50%, rgba(15, 23, 42, 0.35) 100%), 
-            url('images/back3.png') center/cover no-repeat;
+            url('images/back3.webp') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
