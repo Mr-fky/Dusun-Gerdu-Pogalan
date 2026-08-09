@@ -187,9 +187,11 @@ nav.scrolled .menu-toggle .bar {
    ========================================================================== */
 header {
   height: 90vh;
-  min-height: 550px;
-  background: linear-gradient(rgba(20, 50, 38, 0.6), rgba(27, 67, 50, 0.85)), 
-              url('images/panoramamerbabu.jpeg') center/cover no-repeat fixed;
+min-height: 550px;
+
+/* Gradient lebih tipis & transparan agar gunung terlihat terang dan hidup */
+background: linear-gradient(180deg, rgba(15, 23, 42, 0.35) 0%, rgba(0, 0, 0, 0.1) 50%, rgba(15, 23, 42, 0.35) 100%), 
+            url('images/back3.png') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -919,3 +921,4 @@ footer {
 .gallery-slider::-webkit-scrollbar-thumb:hover {
   background: #1b4332;
 }
+
